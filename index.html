@@ -1,86 +1,130 @@
 <!DOCTYPE html>
-<html lang="zh-HK">
+<html lang="zh-CN">
 <head>
-    <title>香港九寬科技有限公司 - 全球化算力基建与大模型服务</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-orientation" content="portrait">
+    <title>香港九宽科技｜IDC托管｜AWS云代理｜大模型API</title>
+    <meta name="keywords" content="九宽科技,香港IDC托管,AWS云代理,大模型API,Claude,OpenAI,Gemini,DeepSeek">
+    <meta name="description" content="香港九宽科技三大核心业务：香港IDC托管及机房代维、AWS云代理服务、OMNI大模型API一站式接入平台。">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {margin: 0; padding: 0; box-sizing: border-box;}
-        body {
-            font-family: Arial, "Microsoft YaHei", sans-serif; 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            padding: 20px; 
-            color: #333; 
-            line-height: 1.8;
-            /* 改路径：加./，适配QQ浏览器 */
-            background-image: url(./images/lan.png); 
-            background-repeat: no-repeat; 
-            background-size: cover; 
-            background-position: center center; 
-            background-attachment: fixed; 
-            background-color: #e6f0ff; 
-        }
-        header {text-align: center; padding: 30px 0; border-bottom: 1px solid #eee; background: rgba(255,255,255,0.85); border-radius: 8px; margin-bottom: 20px;}
-        header img.logo {width: 150px; height: auto; margin-bottom: 15px;}
-        h1 {color: #222; font-size: 24px; margin-bottom: 8px;}
-        .subtitle {color: #666; font-size: 16px;}
-        section {margin: 40px 0; background: rgba(255,255,255,0.85); padding: 20px; border-radius: 8px;}
-        h2 {color: #222; font-size: 20px; margin-bottom: 20px; border-left: 4px solid #0066cc; padding-left: 10px;}
-        .service-img {width: 100%; max-width: 800px; border-radius: 8px; margin: 15px 0;}
-        .service-list {margin-left: 20px;}
-        .service-list li {margin-bottom: 15px;}
-        .contact {background: rgba(255,255,255,0.9); padding: 25px; border-radius: 8px; margin-top: 20px;}
-        footer {text-align: center; padding: 20px 0; border-top: 1px solid #eee; color: #666; font-size: 14px; margin-top: 40px; background: rgba(255,255,255,0.85); border-radius: 8px;}
-        @media (max-width: 768px) {
-            body {padding: 15px;}
-            h1 {font-size: 20px;}
-            h2 {font-size: 18px;}
-            .contact {padding: 15px;}
-            section {padding: 15px;}
-        }
+        *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif}
+        :root{--main-bg:#0a192f;--card-bg:#112240;--primary:#3399ff;--text-main:#e6f1ff;--text-sub:#8892b0;--border:#233554}
+        html,body{width:100%;height:100%;background:var(--main-bg);color:var(--text-main);line-height:1.8;-webkit-tap-highlight-color:transparent}
+        body{overflow-x:hidden;position:relative}
+        .container{width:94%;max-width:1300px;margin:0 auto}
+        .navbar{position:fixed;top:0;left:0;width:100%;background:rgba(10,25,47,0.95);border-bottom:1px solid var(--border);z-index:999;padding:18px 0}
+        .nav-wrap{display:flex;justify-content:space-between;align-items:center}
+        .logo img{height:45px;object-fit:contain}
+        .nav-menu{display:flex;gap:36px;list-style:none}
+        .nav-menu a{color:var(--text-main);text-decoration:none;font-size:16px;font-weight:500;transition:0.3s}
+        .nav-menu a:hover{color:var(--primary)}
+        .hamburger{display:none;font-size:26px;color:var(--text-main);cursor:pointer}
+        /* SimCentric同款全屏Banner */
+        .banner{margin-top:85px;padding:140px 0;text-align:center;position:relative;background:url(banner.jpg) center center / cover;}
+        .banner::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(17,34,64,0.9),rgba(10,25,47,0.8));z-index:1;}
+        .banner .container{position:relative;z-index:2;}
+        .banner h1{font-size:48px;margin-bottom:24px;font-weight:600}
+        .banner p{font-size:20px;color:var(--text-sub);max-width:800px;margin:0 auto 40px}
+        .btn{padding:18px 42px;background:var(--primary);color:#fff;border:none;border-radius:6px;font-size:16px;font-weight:500;cursor:pointer;transition:0.3s;text-decoration:none;display:inline-block}
+        .btn:hover{background:#217dbb}
+        .business{padding:100px 0}
+        .section-title{text-align:center;margin-bottom:60px;font-size:34px;font-weight:600}
+        .section-title span{color:var(--primary)}
+        .business-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+        /* 🔥 核心修复：强制标签和按钮对齐 */
+        .business-card{background:var(--card-bg);border-radius:12px;padding:45px;transition:0.4s;text-align:center;display:flex;flex-direction:column;justify-content:space-between;min-height:620px}
+        .business-card:hover{transform:translateY(-10px);box-shadow:0 15px 35px rgba(51,153,255,0.1)}
+        /* 内部内容容器，设置为弹性布局 */
+        .card-content{display:flex;flex-direction:column;flex-grow:1}
+        .business-card i{font-size:55px;color:var(--primary);margin-bottom:30px}
+        .business-card h3{font-size:26px;margin-bottom:24px;font-weight:600}
+        /* 让描述文字自动填充空间，确保下方标签组对齐 */
+        .business-card p{color:var(--text-sub);font-size:16px;line-height:1.9;flex-grow:1;margin-bottom:28px}
+        .business-card .tag{display:inline-block;padding:8px 16px;background:rgba(51,153,255,0.1);color:var(--primary);border-radius:20px;font-size:14px;margin:0 8px 8px 0}
+        .advantage{padding:80px 0;background:var(--card-bg)}
+        .adv-grid{display:flex;justify-content:center;flex-wrap:wrap;gap:36px;text-align:center}
+        .adv-item{width:220px}
+        .adv-item i{font-size:32px;color:var(--primary);margin-bottom:16px}
+        .adv-item p{color:var(--text-sub);font-size:15px;margin-top:8px}
+        .footer{padding:60px 0 30px;background:var(--main-bg);border-top:1px solid var(--border)}
+        .footer-wrap{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:40px}
+        .footer-col p{color:var(--text-sub);font-size:15px;line-height:2;margin-bottom:12px}
+        .copyright{text-align:center;color:var(--text-sub);font-size:14px;padding:25px;margin-top:30px;border-top:1px solid var(--border)}
+        @media (max-width:992px){.business-grid{grid-template-columns:repeat(2,1fr)}}
+        @media (max-width:768px){.nav-menu{display:none}.hamburger{display:block}.banner h1{font-size:34px}.business-grid{grid-template-columns:1fr}.banner{padding:80px 0}}
     </style>
 </head>
 <body>
-    <header>
-        <!-- 改路径：加./ -->
-        <img src="./images/jklogo.png" alt="九寬科技Logo" class="logo">
-        <h1>香港九寬科技有限公司 / Hong Kong Jiu Kuan Technology Co., Limited</h1>
-        <p class="subtitle">立足香港·新加坡双枢纽 | 算力基建+大模型服务双驱动</p>
-    </header>
-
-    <section id="about">
-        <h2>公司简介</h2>
-        <p>香港九寬科技有限公司是一家以全球化算力基础设施与大模型服务为核心的科技企业，立足香港、新加坡双枢纽，深耕大陆、日本等关键市场，构建覆盖多区域的IDC机房网络与弹性算力服务体系，专注为游戏、在线教育及旅游行业提供“算力租赁+大模型应用+场景化解决方案”的一站式智能化支持，以“智能全球化”理念赋能企业高效链接AI技术价值。</p>
-    </section>
-
-    <section id="advantage">
-        <h2>核心能力</h2>
-        <p>算力基建与大模型服务双驱动,公司的核心竞争力源于扎实的全球化资源布局与精准的技术服务能力。</p>
-    </section>
-
-    <section id="services">
-        <h2>核心业务</h2>
-        <!-- 改路径：加./ -->
-        <img src="./images/IDC.png" alt="九寬科技多区域IDC机房" class="service-img">
-        <ul class="service-list">
-            <li><strong>多区域IDC机房与算力租赁服务：</strong>凭借大陆、香港、新加坡、马来、印尼等地部署Tier 3+级IDC机房，提供单机柜最高40KW配电与GPU高密度部署能力，搭建“本地机房+全球分布式GPU资源池”的混合架构。</li>
-            <li><strong>云算力租赁：</strong>与AWS、阿里云等公有云形成协同网络，服务支持从基础算力到大规模AI训练的全场景需求。</li>
-            <li><strong>大模型服务：</strong>整合GPT系列、Claude、deepseek、豆包、千问等顶尖大模型资源，打造FlexiCore OmniMarket大模型超市。为客户提供合规、高效的AI服务，无需复杂对接流程即可灵活调用各类大模型能力，大幅降低企业接入AI技术的门槛与成本。</li>
+<!-- 导航不变 -->
+<nav class="navbar">
+    <div class="container nav-wrap">
+        <div class="logo"><img src="logo.png" alt="香港九宽科技 JKTHC"></div>
+        <ul class="nav-menu">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="about.html">企业简介</a></li>
+            <li><a href="contact.html">联系我们</a></li>
         </ul>
-        <!-- 改路径：加./ -->
-        <img src="./images/office.jpg" alt="九寬科技香港办公地址" class="service-img">
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>联系方式</h2>
-        <p>📞 邮箱：avasun406@gmail.com </p>
-        <p>📍 香港公司地址：Suite 6503, 65/F, Central Plaza, 18 Harbour Road, Wan Chai Hong Kong</p>
-    </section>
-
-    <footer>
-        <p>© 2026 香港九寬科技有限公司 / Hong Kong Jiu Kuan Technology Co., Limited 版权所有</p>
-        <p>香港商业登记证号：77200510-000-10-24-3 </p>
-    </footer>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+    </div>
+</nav>
+<!-- Banner（SimCentric同款） -->
+<section class="banner" id="home">
+    <div class="container">
+        <h1>香港九宽科技有限公司</h1>
+        <p>全球化算力基础设施 | 香港IDC托管 | AWS云代理 | 大模型API平台</p>
+        <a href="#business" class="btn">查看核心业务</a>
+    </div>
+</section>
+<!-- 业务模块不变 -->
+<section class="business" id="business">
+    <div class="container">
+        <h2 class="section-title"><span>三大核心业务</span> · 全栈数字化服务</h2>
+        <div class="business-grid">
+            <div class="business-card">
+                <div class="card-content">
+                    <i class="fas fa-server"></i>
+                    <h3>香港IDC托管及机房代维</h3>
+                    <p>香港Tier 3+高品质IDC机房，提供服务器托管、机柜租用、带宽接入、7×24小时机房代维、网络监控、故障快速响应，BGP优化线路，大陆访问低至22-30ms，稳定支撑跨境业务与全球化部署。</p>
+                    <div>
+                        <span class="tag">服务器托管</span><span class="tag">机柜租用</span><span class="tag">7×24代维</span><span class="tag">BGP低延迟</span>
+                    </div>
+                </div>
+                <a href="idc.html" class="btn">业务详情</a>
+            </div>
+            <div class="business-card">
+                <div class="card-content">
+                    <i class="fab fa-aws"></i>
+                    <h3>AWS云代理服务</h3>
+                    <p>AWS官方授权代理商，提供账号开通、架构规划、成本优化、上云迁移、技术支持、混合云部署等全流程解决方案，助力企业安全、高效、低成本使用全球领先的AWS云服务。</p>
+                    <div>
+                        <span class="tag">账号开通</span><span class="tag">架构规划</span><span class="tag">成本优化</span><span class="tag">技术支持</span>
+                    </div>
+                </div>
+                <a href="aws.html" class="btn">业务详情</a>
+            </div>
+            <div class="business-card">
+                <div class="card-content">
+                    <i class="fas fa-brain"></i>
+                    <h3>Omni大模型API转售平台</h3>
+                    <p>Omini一站式接入Claude、OpenAI、Gemini、DeepSeek、豆包、千问等全球主流大模型API，低延迟、高并发、合规稳定、按量计费，大幅降低企业AI开发接入成本。</p>
+                    <div>
+                        <span class="tag">多模型合一</span><span class="tag">合规稳定</span><span class="tag">按量计费</span><span class="tag">低延迟</span>
+                    </div>
+                </div>
+                <a href="api.html" class="btn">业务详情</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 优势+底部不变 -->
+<section class="advantage"><div class="container"><div class="adv-grid"><div class="adv-item"><i class="fas fa-shield-alt"></i><p>7×24小时运维</p></div><div class="adv-item"><i class="fas fa-globe"></i><p>全球节点优化</p></div><div class="adv-item"><i class="fas fa-handshake"></i><p>官方授权合规</p></div><div class="adv-item"><i class="fas fa-chart-line"></i><p>高性价比</p></div></div></div></section>
+<footer class="footer"><div class="container"><div class="footer-wrap"><div class="footer-col"><p><strong>香港九宽科技有限公司</strong></p><p>Hong Kong Jiu Kuan Technology Co., Limited</p><p>香港商业登记证号：77200510-000-10-24-3</p></div><div class="footer-col"><p><strong>联系我们</strong></p><p>邮箱：scOmni@gmail.com</p><p>地址：Suite 6503, 65/F, Central Plaza, 18 Harbour Road, Wan Chai Hong Kong</p></div></div><div class="copyright">© 2026 香港九寬科技有限公司 / Hong Kong Jiu Kuan Technology Co., Limited 版权所有</div></div></footer>
+<script>
+document.addEventListener('touchmove', function(e) {if(!e.target.closest('.business-card')){e.preventDefault()}},{passive:false})
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',e=>{e.preventDefault();document.querySelector(anchor.getAttribute('href')).scrollIntoView({behavior:'smooth'})})})
+</script>
 </body>
 </html>
