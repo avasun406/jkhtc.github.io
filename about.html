@@ -12,15 +12,15 @@
     <style>
         *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif}
         :root{--main-bg:#0a192f;--card-bg:#112240;--primary:#3399ff;--text-main:#e6f1ff;--text-sub:#8892b0;--border:#233554}
-        html,body{width:100%;height:100%;background:var(--main-bg);color:var(--text-main);line-height:1.8;-webkit-tap-highlight-color:transparent}
-        body{overflow-x:hidden;position:relative}
+        html,body{width:100%;height:auto;min-height:100%;background:var(--main-bg);color:var(--text-main);line-height:1.8;-webkit-tap-highlight-color:transparent}
+        body{overflow-x:hidden;}
         .container{width:94%;max-width:1300px;margin:0 auto}
         .navbar{position:fixed;top:0;left:0;width:100%;background:rgba(10,25,47,0.95);border-bottom:1px solid var(--border);z-index:999;padding:18px 0}
         .nav-wrap{display:flex;justify-content:space-between;align-items:center}
         .logo img{height:45px;object-fit:contain}
         .nav-menu{display:flex;gap:36px;list-style:none}
         .nav-menu a{color:var(--text-main);text-decoration:none;font-size:16px;font-weight:500;transition:0.3s}
-        .nav-menu a:hover{color:var(--primary)}
+        .nav-menu a:hover,.nav-menu a.active{color:var(--primary)}
         .hamburger{display:none;font-size:26px;color:var(--text-main);cursor:pointer}
         .content{margin-top:85px;padding:80px 0}
         .idc-top-img,.section-img{width:100%;object-fit:cover;border-radius:12px;margin-bottom:40px;}
@@ -31,11 +31,20 @@
         .content-card p{color:var(--text-sub);font-size:16px;line-height:1.9;margin-bottom:20px}
         .content-card ul{margin-left:22px;color:var(--text-sub)}
         .content-card ul li{margin-bottom:12px;font-size:16px}
+        .back-home{text-align:center;margin:60px 0;}
+        .back-home a{padding:16px 40px;background:var(--primary);color:#fff;border-radius:6px;text-decoration:none;font-size:16px;font-weight:500;display:inline-block;transition:0.3s;}
+        .back-home a:hover{background:#217dbb;}
         .footer{padding:60px 0 30px;background:var(--main-bg);border-top:1px solid var(--border)}
         .footer-wrap{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:40px}
         .footer-col p{color:var(--text-sub);font-size:15px;line-height:2;margin-bottom:12px}
         .copyright{text-align:center;color:var(--text-sub);font-size:14px;padding:25px;margin-top:30px;border-top:1px solid var(--border)}
-        @media (max-width:768px){.nav-menu{display:none}.hamburger{display:block}.page-title{font-size:30px}.content-card{padding:35px}.idc-top-img{height:240px;}}
+        @media (max-width:768px){
+            .nav-menu{display:none;}
+            .hamburger{display:block;}
+            .page-title{font-size:30px;}
+            .content-card{padding:35px;}
+            .idc-top-img{height:240px;}
+        }
     </style>
 </head>
 <body>
@@ -43,11 +52,11 @@
     <div class="container nav-wrap">
         <div class="logo"><img src="logo.png" alt="香港九宽科技 JKTHC"></div>
         <ul class="nav-menu">
-            <li><a href="index.html">首页</a></li>
+            <li><a href="index.html" class="active">首页</a></li>
             <li><a href="idc.html">IDC托管</a></li>
             <li><a href="aws.html">AWS云代理</a></li>
             <li><a href="api.html">大模型API</a></li>
-            <li><a href="about.html" style="color:var(--primary)">企业简介</a></li>
+            <li><a href="about.html">企业简介</a></li>
             <li><a href="contact.html">联系我们</a></li>
         </ul>
         <div class="hamburger"><i class="fas fa-bars"></i></div>
@@ -59,16 +68,19 @@
         <img src="about-top.jpg" alt="香港九宽科技" class="idc-top-img">
         <div class="content-card">
             <h2>公司简介</h2>
-            <p>香港九宽科技有限公司（HKJKTHC）是一家以全球化算力基础设施与大模型服务为核心的科技企业。我们立足香港、新加坡双枢纽，深耕大陆、日本等关键市场，致力于为游戏、在线教育、旅游、跨境电商等行业提供「算力租赁+大模型应用+场景化解决方案」的一站式智能化支持。</p>
+            <p>香港九宽科技有限公司（HKJKTHC）是一家以全球化算力基础设施与大模型服务为核心的科技企业。我们立足香港、新加坡双枢纽，深耕内地及东南亚市场，为跨境电商、游戏、科技企业提供算力托管、云服务、AI大模型API一站式解决方案。</p>
         </div>
-        <div class="content-card">
-                       <h2>发展历程与使命</h2>
-            <p><strong>企业使命：</strong>以“智能全球化”为理念，赋能企业高效链接全球顶尖的AI技术与算力资源，帮助客户在数字化浪潮中抓住机遇，实现业务的快速增长和创新。</p>
+                <div class="content-card">
+            <h2>发展历程与使命</h2>
+            <p><strong>企业使命：</strong>以智能全球化为核心，助力企业低成本、高效率布局海外算力与AI能力。</p>
             <ul>
-                <li><strong>2024年：</strong>公司正式成立，获得香港商业登记证。</li>
-                <li><strong>2025年：</strong>成为AWS官方授权代理商，推出 Omni大模型API平台。</li>
-                <li><strong>2026年：</strong>完成全球多区域IDC节点布局，服务客户覆盖Ai潮玩、游戏、教育、电商等多个行业。</li>
+                <li><strong>2024年：</strong>香港公司正式注册成立。</li>
+                <li><strong>2025年：</strong>布局香港IDC、AWS云代理业务。</li>
+                <li><strong>2026年：</strong>上线全球大模型API聚合平台，拓展东南亚算力市场。</li>
             </ul>
+        </div>
+        <div class="back-home">
+            <a href="index.html"><i class="fas fa-home"></i> 返回首页</a>
         </div>
     </div>
 </section>

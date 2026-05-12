@@ -12,15 +12,15 @@
     <style>
         *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif}
         :root{--main-bg:#0a192f;--card-bg:#112240;--primary:#3399ff;--text-main:#e6f1ff;--text-sub:#8892b0;--border:#233554}
-        html,body{width:100%;height:100%;background:var(--main-bg);color:var(--text-main);line-height:1.8;-webkit-tap-highlight-color:transparent}
-        body{overflow-x:hidden;position:relative}
+        html,body{width:100%;height:auto;min-height:100%;background:var(--main-bg);color:var(--text-main);line-height:1.8;-webkit-tap-highlight-color:transparent}
+        body{overflow-x:hidden;}
         .container{width:94%;max-width:1300px;margin:0 auto}
         .navbar{position:fixed;top:0;left:0;width:100%;background:rgba(10,25,47,0.95);border-bottom:1px solid var(--border);z-index:999;padding:18px 0}
         .nav-wrap{display:flex;justify-content:space-between;align-items:center}
         .logo img{height:45px;object-fit:contain}
         .nav-menu{display:flex;gap:36px;list-style:none}
         .nav-menu a{color:var(--text-main);text-decoration:none;font-size:16px;font-weight:500;transition:0.3s}
-        .nav-menu a:hover{color:var(--primary)}
+        .nav-menu a:hover,.nav-menu a.active{color:var(--primary)}
         .hamburger{display:none;font-size:26px;color:var(--text-main);cursor:pointer}
         .content{margin-top:85px;padding:80px 0}
         .idc-top-img{width:100%;object-fit:cover;border-radius:12px;margin-bottom:40px;}
@@ -29,11 +29,20 @@
         .content-card h2{font-size:26px;margin-bottom:25px;color:var(--primary);font-weight:600}
         .content-card p{color:var(--text-sub);font-size:16px;line-height:1.9;margin-bottom:20px;display:flex;align-items:center}
         .content-card p i{margin-right:12px;color:var(--primary)}
+        .back-home{text-align:center;margin:60px 0;}
+        .back-home a{padding:16px 40px;background:var(--primary);color:#fff;border-radius:6px;text-decoration:none;font-size:16px;font-weight:500;display:inline-block;transition:0.3s;}
+        .back-home a:hover{background:#217dbb;}
         .footer{padding:60px 0 30px;background:var(--main-bg);border-top:1px solid var(--border)}
         .footer-wrap{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:40px}
         .footer-col p{color:var(--text-sub);font-size:15px;line-height:2;margin-bottom:12px}
         .copyright{text-align:center;color:var(--text-sub);font-size:14px;padding:25px;margin-top:30px;border-top:1px solid var(--border)}
-        @media (max-width:768px){.nav-menu{display:none}.hamburger{display:block}.page-title{font-size:30px}.content-card{padding:35px}.idc-top-img{height:240px;}}
+        @media (max-width:768px){
+            .nav-menu{display:none;}
+            .hamburger{display:block;}
+            .page-title{font-size:30px;}
+            .content-card{padding:35px;}
+            .idc-top-img{height:240px;}
+        }
     </style>
 </head>
 <body>
@@ -41,12 +50,12 @@
     <div class="container nav-wrap">
         <div class="logo"><img src="logo.png" alt="香港九宽科技 JKTHC"></div>
         <ul class="nav-menu">
-            <li><a href="index.html">首页</a></li>
+            <li><a href="index.html" class="active">首页</a></li>
             <li><a href="idc.html">IDC托管</a></li>
             <li><a href="aws.html">AWS云代理</a></li>
             <li><a href="api.html">大模型API</a></li>
             <li><a href="about.html">企业简介</a></li>
-            <li><a href="contact.html" style="color:var(--primary)">联系我们</a></li>
+            <li><a href="contact.html">联系我们</a></li>
         </ul>
         <div class="hamburger"><i class="fas fa-bars"></i></div>
     </div>
@@ -57,7 +66,7 @@
         <img src="contact-top.jpg" alt="联系我们" class="idc-top-img">
         <div class="content-card">
             <h2>业务咨询</h2>
-            <p>我们期待与您沟通，为您提供专业的IDC全球托管、AWS云代理、大模型API解决方案，助力企业全球化数字化升级。</p>
+            <p>我们期待与您沟通，为您提供专业的IDC托管、AWS云代理、大模型API解决方案，助力企业全球化数字化升级。</p>
         </div>
         <div class="content-card">
             <h2>官方联系方式</h2>
@@ -67,7 +76,10 @@
         </div>
         <div class="content-card">
             <h2>业务合作范围</h2>
-            <p>涵盖全球IDC托管与代维、AWS云服务代理、全球大模型API对接、混合云架构部署、全球化算力解决方案，欢迎各行业企业洽谈合作。</p>
+            <p>涵盖香港IDC托管与代维、AWS云服务代理、全球大模型API对接、混合云架构部署、全球化算力解决方案，欢迎各行业企业洽谈合作。</p>
+        </div>
+        <div class="back-home">
+            <a href="index.html"><i class="fas fa-home"></i> 返回首页</a>
         </div>
     </div>
 </section>
