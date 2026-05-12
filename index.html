@@ -12,8 +12,8 @@
     <style>
         *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif}
         :root{--main-bg:#0a192f;--card-bg:#112240;--primary:#3399ff;--text-main:#e6f1ff;--text-sub:#8892b0;--border:#233554}
-        html,body{width:100%;height:100%;background:var(--main-bg);color:var(--text-main);line-height:1.8;-webkit-tap-highlight-color:transparent}
-        body{overflow-x:hidden;position:relative}
+        html,body{width:100%;height:auto;min-height:100%;background:var(--main-bg);color:var(--text-main);line-height:1.8;-webkit-tap-highlight-color:transparent}
+        body{overflow-x:hidden;}
         .container{width:94%;max-width:1300px;margin:0 auto}
         .navbar{position:fixed;top:0;left:0;width:100%;background:rgba(10,25,47,0.95);border-bottom:1px solid var(--border);z-index:999;padding:18px 0}
         .nav-wrap{display:flex;justify-content:space-between;align-items:center}
@@ -22,7 +22,6 @@
         .nav-menu a{color:var(--text-main);text-decoration:none;font-size:16px;font-weight:500;transition:0.3s}
         .nav-menu a:hover{color:var(--primary)}
         .hamburger{display:none;font-size:26px;color:var(--text-main);cursor:pointer}
-        /* SimCentric同款全屏Banner */
         .banner{margin-top:85px;padding:140px 0;text-align:center;position:relative;background:url(banner.jpg) center center / cover;}
         .banner::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(17,34,64,0.9),rgba(10,25,47,0.8));z-index:1;}
         .banner .container{position:relative;z-index:2;}
@@ -34,14 +33,11 @@
         .section-title{text-align:center;margin-bottom:60px;font-size:34px;font-weight:600}
         .section-title span{color:var(--primary)}
         .business-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
-        /* 🔥 核心修复：强制标签和按钮对齐 */
         .business-card{background:var(--card-bg);border-radius:12px;padding:45px;transition:0.4s;text-align:center;display:flex;flex-direction:column;justify-content:space-between;min-height:620px}
         .business-card:hover{transform:translateY(-10px);box-shadow:0 15px 35px rgba(51,153,255,0.1)}
-        /* 内部内容容器，设置为弹性布局 */
         .card-content{display:flex;flex-direction:column;flex-grow:1}
         .business-card i{font-size:55px;color:var(--primary);margin-bottom:30px}
         .business-card h3{font-size:26px;margin-bottom:24px;font-weight:600}
-        /* 让描述文字自动填充空间，确保下方标签组对齐 */
         .business-card p{color:var(--text-sub);font-size:16px;line-height:1.9;flex-grow:1;margin-bottom:28px}
         .business-card .tag{display:inline-block;padding:8px 16px;background:rgba(51,153,255,0.1);color:var(--primary);border-radius:20px;font-size:14px;margin:0 8px 8px 0}
         .advantage{padding:80px 0;background:var(--card-bg)}
@@ -58,19 +54,21 @@
     </style>
 </head>
 <body>
-<!-- 导航不变 -->
 <nav class="navbar">
     <div class="container nav-wrap">
         <div class="logo"><img src="logo.png" alt="香港九宽科技 JKTHC"></div>
         <ul class="nav-menu">
             <li><a href="index.html">首页</a></li>
+            <li><a href="idc.html">IDC托管</a></li>
+            <li><a href="aws.html">AWS云代理</a></li>
+            <li><a href="api.html">大模型API</a></li>
             <li><a href="about.html">企业简介</a></li>
             <li><a href="contact.html">联系我们</a></li>
         </ul>
         <div class="hamburger"><i class="fas fa-bars"></i></div>
     </div>
 </nav>
-<!-- Banner（SimCentric同款） -->
+
 <section class="banner" id="home">
     <div class="container">
         <h1>香港九宽科技有限公司</h1>
@@ -78,7 +76,7 @@
         <a href="#business" class="btn">查看核心业务</a>
     </div>
 </section>
-<!-- 业务模块不变 -->
+
 <section class="business" id="business">
     <div class="container">
         <h2 class="section-title"><span>三大核心业务</span> · 全栈数字化服务</h2>
@@ -108,8 +106,8 @@
             <div class="business-card">
                 <div class="card-content">
                     <i class="fas fa-brain"></i>
-                    <h3>Omni大模型API转售平台</h3>
-                    <p>Omini一站式接入Claude、OpenAI、Gemini、DeepSeek、豆包、千问等全球主流大模型API，低延迟、高并发、合规稳定、按量计费，大幅降低企业AI开发接入成本。</p>
+                    <h3>OMNI大模型API转售平台</h3>
+                    <p>FlexiCore OmniMarket一站式接入Claude、OpenAI、Gemini、DeepSeek、豆包、千问等全球主流大模型API，低延迟、高并发、合规稳定、按量计费，大幅降低企业AI开发接入成本。</p>
                     <div>
                         <span class="tag">多模型合一</span><span class="tag">合规稳定</span><span class="tag">按量计费</span><span class="tag">低延迟</span>
                     </div>
@@ -119,12 +117,44 @@
         </div>
     </div>
 </section>
-<!-- 优势+底部不变 -->
-<section class="advantage"><div class="container"><div class="adv-grid"><div class="adv-item"><i class="fas fa-shield-alt"></i><p>7×24小时运维</p></div><div class="adv-item"><i class="fas fa-globe"></i><p>全球节点优化</p></div><div class="adv-item"><i class="fas fa-handshake"></i><p>官方授权合规</p></div><div class="adv-item"><i class="fas fa-chart-line"></i><p>高性价比</p></div></div></div></section>
-<footer class="footer"><div class="container"><div class="footer-wrap"><div class="footer-col"><p><strong>香港九宽科技有限公司</strong></p><p>Hong Kong Jiu Kuan Technology Co., Limited</p><p>香港商业登记证号：77200510-000-10-24-3</p></div><div class="footer-col"><p><strong>联系我们</strong></p><p>邮箱：scOmni@gmail.com</p><p>地址：Suite 6503, 65/F, Central Plaza, 18 Harbour Road, Wan Chai Hong Kong</p></div></div><div class="copyright">© 2026 香港九寬科技有限公司 / Hong Kong Jiu Kuan Technology Co., Limited 版权所有</div></div></footer>
+
+<section class="advantage">
+<div class="container">
+<div class="adv-grid">
+<div class="adv-item"><i class="fas fa-shield-alt"></i><p>7×24小时运维</p></div>
+<div class="adv-item"><i class="fas fa-globe"></i><p>全球节点优化</p></div>
+<div class="adv-item"><i class="fas fa-handshake"></i><p>官方授权合规</p></div>
+<div class="adv-item"><i class="fas fa-chart-line"></i><p>高性价比</p></div>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-wrap">
+<div class="footer-col">
+<p><strong>香港九宽科技有限公司</strong></p>
+<p>Hong Kong Jiu Kuan Technology Co., Limited</p>
+<p>香港商业登记证号：77200510-000-10-24-3</p>
+</div>
+<div class="footer-col">
+<p><strong>联系我们</strong></p>
+<p>邮箱：scOmni@gmail.com</p>
+<p>地址：Suite 6503, 65/F, Central Plaza, 18 Harbour Road, Wan Chai Hong Kong</p>
+</div>
+</div>
+<div class="copyright">© 2026 香港九寬科技有限公司 / Hong Kong Jiu Kuan Technology Co., Limited 版权所有</div>
+</div>
+</footer>
+
+<!-- 平滑滚动脚本（无卡顿、兼容微信） -->
 <script>
-document.addEventListener('touchmove', function(e) {if(!e.target.closest('.business-card')){e.preventDefault()}},{passive:false})
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',e=>{e.preventDefault();document.querySelector(anchor.getAttribute('href')).scrollIntoView({behavior:'smooth'})})})
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+    anchor.addEventListener('click',e=>{
+        e.preventDefault();
+        document.querySelector(anchor.getAttribute('href')).scrollIntoView({behavior:'smooth'})
+    })
+})
 </script>
 </body>
 </html>
