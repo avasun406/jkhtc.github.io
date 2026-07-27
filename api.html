@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="x5-fullscreen" content="true">
+<title>大模型MaaS平台 - 香港九寬科技</title>
+<meta name="keywords" content="大模型API,MaaS平台,Claude API,OpenAI API,Gemini API,DeepSeek,FlexiCore OmniMarket">
+<meta name="description" content="FlexiCore OmniMarket 一站式接入 Claude、OpenAI、Gemini、DeepSeek、豆包、千問等全球主流大模型 API，低延遲、高併發、合規穩定、按量計費。">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="大模型MaaS平台 - 香港九寬科技">
+<meta property="og:description" content="一個 API Key，調用全球主流大模型，低延遲、按量計費。">
+<meta property="og:image" content="logo.webp">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav id="nav">
+    <a href="index.html" class="logo">
+        <span class="dot"></span>
+        <img src="logo-nav.webp" alt="香港九寬科技 JKTHC">
+    </a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="idc.html">IDC託管</a></li>
+        <li><a href="aws.html">AWS雲代理</a></li>
+        <li><a href="api.html" class="active">MaaS平台</a></li>
+        <li><a href="about.html">企業簡介</a></li>
+        <li><a href="contact.html">聯繫我們</a></li>
+    </ul>
+    <div class="nav-right">
+        <button class="theme-toggle" id="themeBtn" title="切換主題" aria-label="切換主題">🌙</button>
+        <a href="contact.html" class="btn sm">免費諮詢</a>
+        <button class="hamburger" id="hamburger" aria-label="菜單" aria-expanded="false"><i class="fas fa-bars"></i></button>
+    </div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<main class="page-main">
+<header class="page-hero">
+    <div class="eyebrow">MaaS Platform</div>
+    <h1><span class="gradient-text">FlexiCore OmniMarket</span> 大模型 MaaS 平台</h1>
+    <p class="lead" style="max-width:720px;margin:14px auto 0;color:var(--text-soft);font-size:clamp(15px,2vw,17px);">一站式接入全球主流大模型，一個 API Key 調用所有模型，低延遲、高併發、合規穩定、按量計費。</p>
+</header>
+
+<section class="block">
+    <div class="glass-card reveal" style="max-width:1000px;margin:0 auto;">
+        <h2 class="gradient-text">平台概述</h2>
+        <p>Omni 是香港九寬科技打造的一站式大模型 MaaS 接入平台。我們整合了全球頂尖的 AI 模型供應商，讓企業開發者可以通過統一的 API 接口，輕鬆調用多種大模型的能力，無需分別對接和維護，極大地降低了 AI 應用開發的門檻和成本。</p>
+        <div class="tag-row" style="margin-top:8px;">
+            <span class="tag">多模型合一</span>
+            <span class="tag">低延遲</span>
+            <span class="tag">按量計費</span>
+            <span class="tag">合規穩定</span>
+        </div>
+    </div>
+</section>
+
+<section class="block" style="padding-top:30px;">
+    <div class="section-head reveal">
+        <div class="eyebrow">Models</div>
+        <h2>支持主流大模型</h2>
+        <p>一個平台，覆蓋國內外主流大模型供應商。</p>
+    </div>
+    <div class="glass-card reveal" style="max-width:1000px;margin:0 auto;">
+        <img src="ai-model.webp" alt="AI大模型矩陣" class="section-img" loading="lazy">
+        <ul>
+            <li><strong>OpenAI 系列：</strong>GPT-4、GPT-3.5 Turbo 等</li>
+            <li><strong>Anthropic 系列：</strong>Claude 3 Opus、Sonnet、Haiku 等</li>
+            <li><strong>Google 系列：</strong>Gemini 系列模型</li>
+            <li><strong>國內主流模型：</strong>DeepSeek、豆包、千問等</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ====== 模型對比矩陣 ====== -->
+<section class="block" style="padding-top:30px;">
+    <div class="section-head reveal">
+        <div class="eyebrow">Model Matrix</div>
+        <h2>模型能力對比矩陣</h2>
+        <p>不同模型各有所長，按業務場景精準選型。</p>
+    </div>
+    <div class="glass-card reveal" style="max-width:1000px;margin:0 auto;">
+        <div class="spec-table-wrap">
+            <table class="spec-table">
+                <thead><tr><th>模型</th><th>上下文窗口</th><th>核心能力</th><th>適用場景</th></tr></thead>
+                <tbody>
+                    <tr><td class="col-label">GPT-4o</td><td>128K</td><td>多模態 · 複雜推理 · 代碼</td><td>通用對話、複雜推理、代碼生成</td></tr>
+                    <tr><td class="col-label">Claude 3.5 Sonnet</td><td>200K</td><td>長文本 · 分析 · 寫作</td><td>文檔分析、內容創作、客服</td></tr>
+                    <tr><td class="col-label">Gemini 1.5 Pro</td><td>1M+</td><td>超長上下文 · 多模態</td><td>視頻理解、長文檔處理</td></tr>
+                    <tr><td class="col-label">DeepSeek-V3</td><td>64K</td><td>數學推理 · 代碼</td><td>代碼生成、數學計算、邏輯推理</td></tr>
+                    <tr><td class="col-label">豆包 Pro</td><td>128K</td><td>中文理解 · 性價比</td><td>中文客服、內容生成、翻譯</td></tr>
+                    <tr><td class="col-label">通義千問</td><td>128K</td><td>多模態 · 中文 · RAG</td><td>中文場景、企業知識庫問答</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- ====== 應用場景 ====== -->
+<section class="block" style="padding-top:30px;">
+    <div class="section-head reveal">
+        <div class="eyebrow">Use Cases</div>
+        <h2>典型應用場景</h2>
+        <p>從智能客服到 RAG 知識庫，一個 API Key 覆蓋全場景 AI 需求。</p>
+    </div>
+    <div class="industry-grid">
+        <div class="industry-card reveal">
+            <div class="f-icon"><i class="fas fa-headset"></i></div>
+            <h4>智能客服</h4>
+            <p>24/7 多輪對話，意圖識別 + 知識庫 RAG，大幅降低人工成本。</p>
+        </div>
+        <div class="industry-card reveal">
+            <div class="f-icon"><i class="fas fa-pen-fancy"></i></div>
+            <h4>內容生成</h4>
+            <p>營銷文案、報告摘要、多語言翻譯，批量生成高質量內容。</p>
+        </div>
+        <div class="industry-card reveal">
+            <div class="f-icon"><i class="fas fa-code"></i></div>
+            <h4>代碼輔助</h4>
+            <p>代碼生成、Code Review、Bug 定位，提升研發效率 30%+。</p>
+        </div>
+        <div class="industry-card reveal">
+            <div class="f-icon"><i class="fas fa-chart-pie"></i></div>
+            <h4>數據分析</h4>
+            <p>自然語言查詢數據、自動生成報表與可視化圖表。</p>
+        </div>
+        <div class="industry-card reveal">
+            <div class="f-icon"><i class="fas fa-book"></i></div>
+            <h4>RAG 知識庫</h4>
+            <p>企業文檔向量化 + 檢索增強生成，構建私有智能問答系統。</p>
+        </div>
+        <div class="industry-card reveal">
+            <div class="f-icon"><i class="fas fa-image"></i></div>
+            <h4>多模態應用</h4>
+            <p>圖文理解、OCR 識別、視頻內容分析，拓展 AI 感知邊界。</p>
+        </div>
+    </div>
+</section>
+
+<!-- ====== 技術特性 ====== -->
+<section class="block" style="padding-top:30px;">
+    <div class="section-head reveal">
+        <div class="eyebrow">Technical Features</div>
+        <h2>平台技術特性</h2>
+        <p>開箱即用的企業級 API 能力，降低開發複雜度。</p>
+    </div>
+    <div class="glass-card reveal" style="max-width:1000px;margin:0 auto;">
+        <div class="feature-grid">
+            <div class="feature">
+                <div class="f-icon"><i class="fas fa-stream"></i></div>
+                <div><h4>流式響應 (SSE)</h4><span>Server-Sent Events 實時流式輸出，首字延遲低至 200ms。</span></div>
+            </div>
+            <div class="feature">
+                <div class="f-icon"><i class="fas fa-plug"></i></div>
+                <div><h4>Function Calling</h4><span>原生支持函數調用，輕鬆接入外部 API 與工具鏈。</span></div>
+            </div>
+            <div class="feature">
+                <div class="f-icon"><i class="fas fa-file-image"></i></div>
+                <div><h4>多模態輸入</h4><span>支持圖片、PDF、文檔等多模態輸入，視覺理解能力。</span></div>
+            </div>
+            <div class="feature">
+                <div class="f-icon"><i class="fas fa-vector-square"></i></div>
+                <div><h4>Embedding 向量</h4><span>文本向量化接口，支撐語義搜索與 RAG 檢索場景。</span></div>
+            </div>
+        </div>
+        <div class="tag-row" style="margin-top:20px;">
+            <span class="tag">JSON Mode</span>
+            <span class="tag">流式輸出</span>
+            <span class="tag">Vision 圖像理解</span>
+            <span class="tag">Function Calling</span>
+            <span class="tag">Embedding 向量</span>
+            <span class="tag">多輪對話</span>
+            <span class="tag">長上下文</span>
+            <span class="tag">多模態</span>
+        </div>
+    </div>
+</section>
+
+<!-- ====== API 代碼示例 ====== -->
+<section class="block" style="padding-top:30px;">
+    <div class="section-head reveal">
+        <div class="eyebrow">Quick Start</div>
+        <h2>API 快速接入示例</h2>
+        <p>統一接口格式，只需替換模型名稱即可切換調用。</p>
+    </div>
+    <div class="glass-card reveal" style="max-width:900px;margin:0 auto;">
+        <div class="code-block">
+            <div class="code-label">cURL</div>
+<pre><code><span class="c-cmt"># 調用 Chat Completions（兼容 OpenAI 格式）</span>
+curl https://api.omni.jkthc.com/v1/chat/completions \
+  -H <span class="c-str">"Content-Type: application/json"</span> \
+  -H <span class="c-str">"Authorization: Bearer YOUR_API_KEY"</span> \
+  -d <span class="c-str">'{
+    "model": "claude-3-5-sonnet",
+    "messages": [
+      {"role": "user", "content": "你好，請介紹一下你自己"}
+    ],
+    "stream": true
+  }'</span></code></pre>
+        </div>
+        <div class="code-block">
+            <div class="code-label">Python</div>
+<pre><code><span class="c-key">from</span> openai <span class="c-key">import</span> OpenAI
+
+client = OpenAI(
+    api_key=<span class="c-str">"YOUR_API_KEY"</span>,
+    base_url=<span class="c-str">"https://api.omni.jkthc.com/v1"</span>
+)
+
+response = client.chat.completions.create(
+    model=<span class="c-str">"gpt-4o"</span>,              <span class="c-cmt"># 一行切換模型</span>
+    messages=[{<span class="c-str">"role"</span>: <span class="c-str">"user"</span>, <span class="c-str">"content"</span>: <span class="c-str">"用 Python 寫一個快速排序"</span>}],
+    stream=<span class="c-key">True</span>
+)
+
+<span class="c-key">for</span> chunk <span class="c-key">in</span> response:
+    print(chunk.choices[0].delta.content, end=<span class="c-str">""</span>)</code></pre>
+        </div>
+        <p style="margin-top:14px;font-size:13.5px;">接口完全兼容 OpenAI SDK，現有代碼只需修改 <strong>base_url</strong> 和 <strong>api_key</strong> 即可無縫遷移。</p>
+    </div>
+</section>
+
+<section class="block" id="why">
+    <div class="section-head reveal">
+        <div class="eyebrow">Why Omni</div>
+        <h2>平台核心優勢</h2>
+        <p>降低接入門檻，讓企業專注 AI 應用本身。</p>
+    </div>
+    <div class="feature-grid">
+        <div class="feature reveal">
+            <div class="f-icon"><i class="fas fa-key"></i></div>
+            <div><h4>一站式接入</h4><span>一個 API Key，即可調用所有模型，免去多頭對接維護。</span></div>
+        </div>
+        <div class="feature reveal">
+            <div class="f-icon"><i class="fas fa-bolt"></i></div>
+            <div><h4>低延遲高併發</h4><span>香港節點直連，保障服務質量與響應速度。</span></div>
+        </div>
+        <div class="feature reveal">
+            <div class="f-icon"><i class="fas fa-coins"></i></div>
+            <div><h4>按量計費</h4><span>靈活付費，無前期投入，用多少算多少。</span></div>
+        </div>
+        <div class="feature reveal">
+            <div class="f-icon"><i class="fas fa-shield-halved"></i></div>
+            <div><h4>合規穩定</h4><span>數據傳輸與使用符合全球法規，正規可靠。</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- 接入流程 -->
+<section class="block" style="padding-top:30px;">
+    <div class="section-head reveal">
+        <div class="eyebrow">Onboarding</div>
+        <h2>API 接入流程</h2>
+        <p>四步快速上線，最快當天完成接入。</p>
+    </div>
+    <div class="cards-3">
+        <div class="glass-card biz-card reveal">
+            <div class="icon">①</div>
+            <h3>註冊開通</h3>
+            <p>聯繫商務開通平台賬號，獲取專屬 API Key。</p>
+        </div>
+        <div class="glass-card biz-card reveal">
+            <div class="icon">②</div>
+            <h3>選擇模型</h3>
+            <p>按業務場景挑選適配的大模型，配置調用額度。</p>
+        </div>
+        <div class="glass-card biz-card reveal">
+            <div class="icon">③</div>
+            <h3>對接聯調</h3>
+            <p>統一接口文檔，技術團隊協助對接與聯調。</p>
+        </div>
+        <div class="glass-card biz-card reveal" style="grid-column: span 3;">
+            <div class="icon">④</div>
+            <h3>上線計費</h3>
+            <p>正式上線，按實際調用量計費，持續優化成本與體驗。</p>
+        </div>
+    </div>
+</section>
+
+<section class="block">
+    <div class="cta-band reveal">
+        <h2>想接入大模型能力？</h2>
+        <p>告訴我們你的模型與併發需求，商務團隊將為你開通專屬接入。</p>
+        <a href="contact.html" class="btn"><i class="fas fa-paper-plane"></i> 申請開通</a>
+    </div>
+</section>
+
+<div class="back-home"><a href="index.html" class="btn ghost sm"><i class="fas fa-home"></i> 返回首頁</a></div>
+</main>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <p class="brand-name">香港九寬科技有限公司</p>
+            <p>Hong Kong Jiu Kuan Technology Co., Limited</p>
+            <p>以全球化算力基礎設施與大模型服務為核心，立足香港、新加坡雙樞紐，深耕內地及東南亞市場。</p>
+        </div>
+        <div class="footer-col">
+            <h4>核心業務</h4>
+            <ul>
+                <li><a href="idc.html">IDC 託管及代維</a></li>
+                <li><a href="aws.html">AWS 雲代理服務</a></li>
+                <li><a href="api.html">大模型 MaaS 平台</a></li>
+                <li><a href="about.html">企業簡介</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>聯繫我們</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> avasun406@jkthc.com</li>
+                <li><i class="fas fa-location-dot"></i> 9A, Eton Building, 288 Des Voeux Road Central, Sheung Wan, Hong Kong</li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">© 2026 香港九寬科技有限公司 / Hong Kong Jiu Kuan Technology Co., Limited 版權所有</div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
